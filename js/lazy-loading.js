@@ -7,6 +7,7 @@
             .then(() => {
                 image.src = imageUrl
                 delete image.dataset.src // https://developer.mozilla.org/es/docs/Web/API/HTMLElement/dataset#Setting_values
+                image.classList.add('loaded')
                 observer.unobserve(image)
             })
             .catch(() => {
@@ -35,7 +36,7 @@
 
     const options = {
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.9
      };
 
     const observer = new IntersectionObserver(handleIntersection, options);

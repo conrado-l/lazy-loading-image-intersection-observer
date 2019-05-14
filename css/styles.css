@@ -5,6 +5,13 @@
 }
 
 .image {
+    position: relative;
     width: 150px;
     height: 150px;
+    filter: blur(1.5px);
+    transition: filter 1.5s;
+}
+
+.loaded {
+    filter: blur(0);
 }
